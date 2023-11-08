@@ -1,0 +1,81 @@
+body {
+    background-color: #2CC0B3;
+}
+
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 1rem 0 2rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* MENU */
+
+header {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão do menu à direita */
+    align-items: center;
+    padding: 10px;
+    background-color: #2CC0B3;
+}
+
+.menu-button {
+    background-color: #333;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-options {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    background-color: #333;
+}
+
+.menu-options li {
+    padding: 10px;
+}
+
+.menu-options a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+
+/* ---- */
+
+.search-container {
+    width: 300px;
+    margin: 20px auto;
+}
+
+#city-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.city-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.city-list li {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.city-list li:hover {
+    background-color: #f2f2f2;
+}

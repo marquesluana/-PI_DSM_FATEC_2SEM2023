@@ -1,0 +1,175 @@
+/* HEADER 1 */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    }
+    ul {
+       padding: 0px!important; 
+    }
+    .menu-principal {
+    width: 100%;
+    background-color: #2CC0B3;
+    height: 60px;
+    }
+    main, .content {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+    }
+    .logo {
+     float: left;
+     padding: px;
+     width: 70%;
+    }
+    .redes-sociais ul li {
+    margin-left: 25px;
+    display: inline-block;  /*  Ul precisa estar inline */
+    float: left;   
+    list-style: none;
+    }
+    .redes-sociais {
+    width: 25%;
+    float: right;
+    }
+
+/* Header 2 */
+    .header-2 {
+    background-color: #ffffff;
+    width: 980px;
+    margin: 0 auto;
+    padding: 16px;
+    }
+    .menu-urls {
+    height: 80px;
+    border-bottom: 3px solid #efefef;
+    }
+    .menu ul li {
+        display: inline-block; /* deixa o menu horizontal */
+        color: #8b8b8b;
+        margin-left: 15px;
+        height: 50px;
+    }
+    
+    .menu ul li:hover {
+        border-bottom: 3px solid #FF6347;
+    }
+    
+    .menu ul li a:hover {
+        color: #FF6347;
+        
+    }
+    
+    .menu ul li a {
+        color: #8b8b8b;
+        text-decoration: none;
+        font-size: 18px; /* espaçamento entre as barras de navegação */
+        text-transform: uppercase; /* deixa tudo maiúsculo */
+    }
+    .menu {
+    width: 70%;
+    float: left;
+    }
+
+    /* ------- */
+
+    .col-100 {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+
+
+    /*  LOGIN */
+
+    /* Layout
+-----------------------------*/
+html,
+body,
+#home {
+    /*border: 1px dashed red;*/
+    height: 100%;
+    overflow-x: hidden;
+    margin-bottom: -100px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../img/capaum.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Estrutura conteúdos
+-----------------------------*/
+.container {
+    max-width: 400px;
+    margin: 170px auto;
+    padding: 35px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.logologin img{
+    display: block; /* Torna a imagem um bloco para alinhar horizontalmente */
+    margin: 0 auto;
+    
+}
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-button {
+    margin-bottom: 10px;
+    margin-left: 30%;
+    font-size: 1em;
+}
+
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-button button {
+    width: 50%;
+    padding: 8px;
+    background-color: #2CC0B3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: center;
+
+}
+
+.form-button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-button a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-button button:hover {
+    background-color: #185544;
+}
+    
+
