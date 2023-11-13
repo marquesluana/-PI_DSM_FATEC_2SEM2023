@@ -6,3 +6,4 @@ PARTICIPANTES:
 - Igor Ferreira
 - Luana Marques
 - Maikon Gino
+- Marcos Maneo
