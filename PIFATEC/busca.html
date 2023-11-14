@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/busca.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>HCC</title>
+
+    <title>Meu Dashboard</title>
 </head>
 <body>
-    <header>
-        <button id="menu-button">Menu</button>
-        <ul id="menu-options">
-            <li><a href="#">Opção 1</a></li>
-            <li><a href="#">Opção 2</a></li>
-            <li><a href="#">Opção 3</a></li>
-        </ul>
-    </header>
-    <h1>Marque com um Cuidador de Idoso</h1>
-    <div class="search-container">
-        <input type="text" id="city-input" placeholder="Digite a cidade ou localidade">
-        <ul id="city-list"></ul>
+    
+    <div class="sidebar">
+        <div class="sidebar-item" onclick="navigateTo('Minhas Consultas')"><i class="fas fa-calendar-alt" style="margin-right: 10px;"></i>Minha Agenda</div>
+        <div class="sidebar-item" onclick="navigateTo('Meu Cartão Virtual')"><i class="fas fa-user-circle" style="margin-right: 10px;"></i>Meus Dados</div>
+        <div class="sidebar-item" onclick="navigateTo('Meu Plano Avus')"><i class="fa-brands fa-searchengin" style="margin-right: 10px;"></i></i>Pesquisar</div>
+        <div class="sidebar-item" onclick="navigateTo('Canais de Atendimento')"><i class="fa-solid fa-rotate-left" style="margin-right: 10px;"></i>Voltar ao Site</div>
+        <div class="sidebar-item" onclick="navigateTo('Sair')"><i class="fa-solid fa-right-from-bracket" style="margin-right: 10px;"></i>Sair</div>
     </div>
-    <script type="text/javascript" src="./js/busca.js"></script>
-    <script type="text/javascript" src="./js/busca2.js"></script>
-    <script type="text/javascript" src="./js/busca3.js"></script>
+    <div class="container">
+        <div class="logologin">
+            <img src="./img/logofinal1.png" />
+        </div>
+    <form>
+        <div class="form-group">
+            <label for="location">Busque prestadores da sua região:</label>
+            <input type="location" id="location" name="location" placeholder="Digite sua localidade" type="text" required>
+        </div>
+        <div class="form-button">
+            <button type="submit"><a href="#">Buscar</a></button>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>

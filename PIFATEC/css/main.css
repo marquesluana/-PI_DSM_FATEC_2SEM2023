@@ -4,7 +4,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "montserrat";
     }
     ul {
        padding: 0px!important; 
@@ -128,6 +128,44 @@ body {
     .slick-initialized {
         overflow: hidden;
     }
+
+
+    /*  botão area acesso */
+    
+    .form-button {
+        text-align: center;
+        width: 35%;
+        float: right
+        
+    }
+
+    .form-button button {
+        width: 70%;
+        padding: 8px;
+        background-color: #2CC0B3;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: center;
+        
+    
+    }
+    
+    .form-button a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .form-button a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .form-button button:hover {
+        background-color: #185544;
+    }
+        
 
     /* Os botoes do carrossel */
     .slick-dots li button {

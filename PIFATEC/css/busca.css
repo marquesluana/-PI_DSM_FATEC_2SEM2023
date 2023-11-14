@@ -1,81 +1,135 @@
+/* Definições para o corpo da página */
 body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: "montserrat";
+    background: url(../img/);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+    }
+
+/* Estilo do menu lateral */
+.sidebar {
+    width: 200px;
+    height: 100%;
     background-color: #2CC0B3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+    transition: width 0.3s; /* Adicionando uma transição de largura */
 }
 
+/* Estilo dos itens do menu lateral */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff; /* Mudando a cor do texto para branco */
+    transition: background-color 0.3s; /* Adicionando transição de cor de fundo */
+}
 
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #FFFFFF;
-    margin: 1rem 0 2rem;
-    line-height: 1.2;
+/* Efeito de hover (quando o mouse está sobre o item) */
+.sidebar-item:hover {
+    background-color: #185544; /* Mudando a cor de fundo quando o mouse passa por cima */
+}
+/* Buscador */
+
+
+.container {
+    width: 30%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 170px auto;
+    padding: 45px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+
+.logologin img{
+    display: block; /* Torna a imagem um bloco para alinhar horizontalmente */
+    margin: 0 auto;
+    margin-bottom: 50px; 
+    
+}
+h2 {
     text-align: center;
 }
 
-/* MENU */
-
-header {
-    display: flex;
-    justify-content: flex-end; /* Alinha o botão do menu à direita */
-    align-items: center;
-    padding: 10px;
-    background-color: #2CC0B3;
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
-.menu-button {
-    background-color: #333;
-    color: #FFF;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.menu-options {
-    display: none;
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    background-color: #333;
-}
-
-.menu-options li {
-    padding: 10px;
-}
-
-.menu-options a {
-    text-decoration: none;
-    color: #FFF;
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* Aumenta o espaço entre o label e o input */
+    color: #365659; /* Altera a cor do texto */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-family: 'Arial', sans-serif; /* Define uma fonte personalizada */
+    
 }
 
 
-/* ---- */
 
-.search-container {
-    width: 300px;
-    margin: 20px auto;
+.form-button {
+    margin-bottom: 10px;
+    margin-left: 30%;
+    font-size: 1em;
 }
 
-#city-input {
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-.city-list {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-.city-list li {
+.form-button button {
+    width: 50%;
+    padding: 8px;
+    background-color: #2CC0B3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    padding: 5px;
-    border: 1px solid #eee;
+    position: center;
+
 }
 
-.city-list li:hover {
-    background-color: #f2f2f2;
+.form-button a {
+    color: #fff;
+    text-decoration: none;
 }
+
+.form-button a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-button button:hover {
+    background-color: #185544;
+}
+    

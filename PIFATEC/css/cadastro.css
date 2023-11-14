@@ -5,7 +5,12 @@ body {
     height: 100%;
     margin: 0 auto;
     font-family: "montserrat";
-
+    background: url(../img/);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
     }
 
     
@@ -89,6 +94,8 @@ body {
 
     /* Layout
 -----------------------------*/
+
+
 /* Estrutura conteúdos
 -----------------------------*/
 .container {
@@ -98,6 +105,8 @@ body {
     background-color: #FFF;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Utiliza flex para os elementos ficarem lado a lado */
+    gap: 30px; /* Define um espaçamento entre os formulários */
 }
 .logologin img{
     display: block; /* Torna a imagem um bloco para alinhar horizontalmente */
@@ -109,14 +118,22 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 30%;
+    flex 1;
 }
+
+.form-group1 {
+    margin-bottom: 20px;
+    flex 1;
+}
+
 
 
 .form-button {
     margin-bottom: 10px;
-    margin-left: 30%;
+    margin-left: 10%;
     font-size: 1em;
+    
 }
 
 
@@ -134,8 +151,8 @@ h2 {
 }
 
 .form-button button {
-    width: 50%;
-    padding: 8px;
+    width: 80%;
+    padding: 10px;
     background-color: #2CC0B3;
     color: #fff;
     border: none;
@@ -159,4 +176,3 @@ h2 {
     background-color: #185544;
 }
     
-
