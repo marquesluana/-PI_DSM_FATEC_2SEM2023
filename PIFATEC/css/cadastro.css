@@ -108,6 +108,9 @@ body {
     display: flex; /* Utiliza flex para os elementos ficarem lado a lado */
     gap: 30px; /* Define um espaçamento entre os formulários */
 }
+
+
+
 .logologin img{
     display: block; /* Torna a imagem um bloco para alinhar horizontalmente */
     margin: 0 auto;
@@ -127,6 +130,12 @@ h2 {
     flex 1;
 }
 
+.form-group2 {
+    margin-bottom: 2px;
+    flex 1;
+    height: 32px;
+    width: 186px;
+}
 
 
 .form-button {
