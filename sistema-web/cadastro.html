@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/cadastro.css">
-        
+    <link rel="icon" href="./img/favicon.png.png">
     <title>Cadastro</title>
 </head>
 <body>
@@ -75,7 +75,7 @@
             <div class="form-group">
                 <input type="cpf" id="cpf" name="cpf" placeholder="CPF" type="text" required>            </div>
             <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="E-mail" type="text" required>            </div>
+                <input type="email" id="email" name="email" placeholder="E-mail" type="email" required>            </div>
                 <div class="form-group">
                     <input type="date" id="date" name="date" placeholder="Data de Nascimento" type="text" required>            </div>
             <div class="form-group">
@@ -85,22 +85,59 @@
         </form>
         <form>
             <div class="form-group">
-                <input type="telefone" id="telefone" name="telefone" placeholder="Telefone(Opcional)" type="text" required>            
+                <input type="tel" id="tel" name="tel" placeholder="Telefone(Opcional)" type="tel" required>            
             </div>
             <div class="form-group">
-                <input type="celular" id="celular" name="celular" placeholder="Celular" type="text" required>           
+                <input type="tel" id="celular" name="celular" placeholder="Celular" type="tel" required>           
              </div> 
             <div class="form-group">
-                <input type="state" id="state" name="state" placeholder="Estado" type="text" required>            </div>
+                <select class="form-group2">
+                    <option selected disabled>Selecione um estado</option>
+    <option value="AC">Acre</option>
+    <option value="AL">Alagoas</option>
+    <option value="AP">Amapá</option>
+    <option value="AM">Amazonas</option>
+    <option value="BA">Bahia</option>
+    <option value="CE">Ceará</option>
+    <option value="DF">Distrito Federal</option>
+    <option value="ES">Espírito Santo</option>
+    <option value="GO">Goiás</option>
+    <option value="MA">Maranhão</option>
+    <option value="MT">Mato Grosso</option>
+    <option value="MS">Mato Grosso do Sul</option>
+    <option value="MG">Minas Gerais</option>
+    <option value="PA">Pará</option>
+    <option value="PB">Paraíba</option>
+    <option value="PR">Paraná</option>
+    <option value="PE">Pernambuco</option>
+    <option value="PI">Piauí</option>
+    <option value="RJ">Rio de Janeiro</option>
+    <option value="RN">Rio Grande do Norte</option>
+    <option value="RS">Rio Grande do Sul</option>
+    <option value="RO">Rondônia</option>
+    <option value="RR">Roraima</option>
+    <option value="SC">Santa Catarina</option>
+    <option value="SP">São Paulo</option>
+    <option value="SE">Sergipe</option>
+    <option value="TO">Tocantins</option>
+                  </select>          
+            </div>
             <div class="form-group">
                 <input type="city" id="city" name="city" placeholder="Cidade" type="text" required>
             </div>
             <div class="form-group">
-                <input type="tipouser" id="tipouser" name="tipouser" placeholder="Cliente ou Prestador de Serviços" type="text" required>            </div>
+                <select class="form-group2">
+                    <option value="PS">Prestador de Serviço</option>
+                    <option value="CLI">Cliente</option>
+                  </select>          
+            </div>
 
                 <div class="form-group">
-                    <input type="categoria" id="categoria" name="categoria" placeholder="PCD ou Idoso?" type="text" required>            </div>
-            
+                    <select class="form-group2">
+                        <option value="Idoso">Sou Idoso</option>
+                        <option value="PCD">Sou PCD</option>
+                      </select>          
+                </div>
             
                 <div class="form-button">
                     <button type="submit"><a href="#">Criar conta</a></button>
