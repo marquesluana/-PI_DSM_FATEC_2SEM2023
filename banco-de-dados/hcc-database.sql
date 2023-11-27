@@ -12,7 +12,7 @@ CREATE TABLE Usuario (
     sexo ENUM('Masculino', 'Feminino') NOT NULL,
     email VARCHAR(30) UNIQUE,
     senha VARCHAR(20) NOT NULL,
-    tipo_usuario ENUM('Paciente', 'Prehcc_databasestador', 'Administrador') NOT NULL,
+    tipo_usuario ENUM('Paciente', 'Prestador', 'Administrador') NOT NULL,
     categoria VARCHAR(60),
     cidade VARCHAR(60) NOT NULL,
     estado VARCHAR(60) NOT NULL,
