@@ -7,16 +7,16 @@ USE hcc_database;
 CREATE TABLE Usuario (
     id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30) NOT NULL,
-    cpf VARCHAR(11) UNIQUE,
-    data_nasc DATE,
+    cpf VARCHAR(11) UNIQUE NOT NULL,
+    data_nasc DATE NOT NULL,
     sexo ENUM('Masculino', 'Feminino') NOT NULL,
-    email VARCHAR(30) UNIQUE,
+    email VARCHAR(30) UNIQUE NOT NULL,
     senha VARCHAR(20) NOT NULL,
     tipo_usuario ENUM('Paciente', 'Prestador', 'Administrador') NOT NULL,
-    categoria VARCHAR(60),
+    categoria VARCHAR(60) NOT NULL,
     cidade VARCHAR(60) NOT NULL,
     estado VARCHAR(60) NOT NULL,
-    celular INT,
+    celular INT NOT NULL,
     foto BLOB
 );
 
