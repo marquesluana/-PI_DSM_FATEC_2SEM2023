@@ -290,6 +290,8 @@ body {
     
     .footer h3 {
         text-align: left;
+        padding-left: 140px;
+
     }
     
     .footer {
@@ -305,6 +307,7 @@ body {
     
     
     .footer p {
+        padding-left: 140px;
         width: 90%;
         text-align: left;
     }
