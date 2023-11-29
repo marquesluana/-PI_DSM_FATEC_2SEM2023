@@ -13,4 +13,4 @@ Repositório utilizado para o Projeto Interdisciplinar do 2º semestre de 2023 d
 - [Marcos Maneo]()
 
 ## TECNOLOGIAS UTILIZADAS:
-[![Linguagens](https://img.shields.io/github/languages/top/marquesluana/-PI_DSM_FATEC_2SEM2023.svg)](https://github.com/marquesluana/-PI_DSM_FATEC_2SEM2023)
+![Estatísticas sobre as Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=marquesluana&layout=compact)
