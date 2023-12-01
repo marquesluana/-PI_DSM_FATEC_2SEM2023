@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos do menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #365659;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.menu a {
+    display: block;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #2CC0B3;
+    color: #000;
+}
+
+#ufpb-logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+/* Estilos do conteúdo */
+.content {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+/* Estilos para dispositivos menores */
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .menu a {
+        padding: 8px 16px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Conteúdo*/
+
+.profile {
+    background-color: rgb(215, 215, 215);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px 50px;
+    border: 1px solid #b3b9c4;
+    border-radius: 4px;
+}
+
+
+.profile img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.profile p {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.profile p strong {
+    text-align: center;
+}
+
+/*cards*/
+.capa {
+    text-align: center;
+    margin-left: 250px;
+}
+
+.capa h1 {
+    margin-bottom: 50px;
+    font-family: 'EB Garamond', serif;
+}
+
+.card {
+    border: 3px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 50%;
+    height: auto;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.card p {
+    margin-top: 2px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.caixa {
+    padding: 50px;
+    background-color: #2CC0B3;
+    margin-top: 10px;
+
+}
+
+.align-low-center { /* mexer no logo */
+    width: 60px;
+    height: 40px;
+    align-items: center;
+}
