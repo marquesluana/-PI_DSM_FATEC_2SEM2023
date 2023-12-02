@@ -13,4 +13,4 @@ Repositório utilizado para o Projeto Interdisciplinar do 2º semestre de 2023 d
 - [Marcos Maneo]()
 
 ## TECNOLOGIAS UTILIZADAS:
-![Estatísticas sobre as Linguagens](https://github-readme-stats.vercel.app/api/top-langs/?username=marquesluana&layout=compact)
+
