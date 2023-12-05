@@ -26,7 +26,7 @@ Repositório utilizado para o Projeto Interdisciplinar do 2º semestre de 2023 d
 
 
 ## COMO RODAR O PROJETO? :
-
+/*
 ### Clone este repositório
 $ git clone <https://github.com/tgmarinho/nlw1>
 
@@ -42,4 +42,4 @@ $ npm install
 ### Execute a aplicação em modo de desenvolvimento
 $ npm run dev:server
 
-### O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+### O servidor inciará na porta:3333 - acesse <http://localhost:3333>*/
