@@ -1,0 +1,116 @@
+/*======================================================
+Cor Azul
+Body                                           = #
+Menu Superior                                  = #dc3545
+Fonte Branca                                   = #fff
+1 - Menu Lateral - Geral                       = #365659
+2 - Menu Lateral - ao passar o mouse           = #000000
+3 - Menu Lateral - dropdawn                    = #587578
+4 - Menu Lateral - quando dropdawn está ativo  = #B3B9C4
+=======================================================*/
+
+body {
+    background-color: #f5ebec;
+}
+.menu-header{
+    color: #FFF !important;
+}
+.sidebar{
+    background-color: #365659;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: calc(100vh - 56px);
+    transition: all 0.3s;
+}
+.sidebar ul li a{
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #c7cace;
+    text-decoration: none;
+}
+.sidebar ul li a:hover, .sidebar ul .active a{
+    color: #ecedee;
+    background-color: #000000;
+}
+.sidebar ul ul a{
+    padding-left: 2.5rem;
+    background-color: #587578;
+}
+/*Seletor utilizado para ativar o botão ocultar menu em PC*/ 
+.sidebar.toggled{
+    margin-left: -250px;
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        margin-left: -250px;
+    }
+    .sidebar.toggled{
+        margin-left: 0px;
+    }
+}
+
+.sidebar [data-toggle="collapse"]{
+    position: relative;
+}
+.sidebar [data-toggle="collapse"]:before{
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 1rem;
+}
+.sidebar [aria-expanded="true"]{
+    background-color: #587578;
+}
+.sidebar [aria-expanded="true"]:before{
+    content: "\f0d8";
+}
+.content {
+    width: 100%;    
+}
+.content a{
+    color: #000;
+}
+.content a:hover{
+  color: #000;
+  text-decoration: none;
+}
+.titulo{
+    font-size: 2.0rem !important;
+    font color: #000;
+}
+/* Conteúdo*/
+
+.profile {
+    background-color: rgb(215, 215, 215);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px 50px;
+    border: 1px solid #b3b9c4;
+    border-radius: 4px;
+}
+
+
+.profile img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.profile p {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.profile p strong {
+    text-align: center;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+}
+/*Personalizar botões*/
