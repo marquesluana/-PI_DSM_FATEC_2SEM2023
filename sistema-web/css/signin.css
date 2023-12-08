@@ -1,0 +1,90 @@
+html,
+body {
+  height: 100%;
+  background-color: #eaeef3;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #faf9f7;
+}
+
+/*Formulário Login*/
+form p a {
+  font-weight: bold;
+  color: #2CC0B3;
+  text-decoration: none;
+}
+form p a:hover {
+  text-decoration: none;
+  box-shadow: none;
+  color: #185544;
+  background-color: transparent;
+  background-image: none;
+  border-color: #185544;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin button {
+    width: 100%;
+    padding: 8px;
+    background-color: #2CC0B3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: center;
+
+}
+
+.form-signin a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-signin a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.form-signin button:hover {
+    background-color: #185544;
+}
