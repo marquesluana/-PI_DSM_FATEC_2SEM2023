@@ -1,3 +1,12 @@
+<?php
+    require_once('header.php');
+    require_once('banco_dados.php');
+
+    //para consultas no banco de dados
+    $db = new DBConnect();
+    $stmt = $db->select_veiculos();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     
@@ -15,12 +24,9 @@
     <script   defer src="js/fontawesome-all.min.js"></script>    
     <!--CSS das páginas-->
     <link    rel="icon"                           href="img/logo.png"><!--Ícone da aba do navegador-->
-    <link    rel="stylesheet"                     href="css/agenda.css"><!--Formato do calenário --> 
     <link    rel="stylesheet"                     href="css/bootstrap.css"><!--Bootstrap 4-->
-    <link    rel="stylesheet"                     href="css/fontawesome.min.css"><!--Ícines relacionados aos botões e ao menu-->     
+    <link    rel="stylesheet"                     href="css/fontawesome.min.css"><!--Ícines relacionados aos botões e ao menu-->    
     <link    rel="stylesheet"                     href="css/dashboard.css"><!--Define a cor do menu de acordo com o perfil do usuário-->
-
-   
       
 
     <title>Acesso Restrito</title>
@@ -56,50 +62,60 @@
             <ul class="list-unstyled">
 
             <li class=''><a href='index.html'><i class='fas fa-tachometer-alt'></i> Home</a></li>
-            <li class='active'><a href='adm_agenda.html'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
+            <li class=''><a href='adm_agenda.html'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
             <li><a href='#submenu2' data-toggle='collapse'><i class='fas fa-search'></i> Pesquisar</a><ul id='submenu2' class='list-unstyled collapse'>
                 <li class=''><a href='adm_prestadores.html'><i class='fas fa-users'></i> Prestador</a></li>
-                <li class=''><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
+                <li class='active'><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
             <li class=''><a href='adm_avaliar.html'><i class="fas fa-pencil-alt"></i> Avaliar</a>
             <li><a href='#submenu3' data-toggle='collapse'><i class='fas fa-user'></i> Informações do Usuário</a><ul id='submenu3' class='list-unstyled collapse'>
                 <li class=''><a href='adm_perfil.html'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='..\login.html'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
 
             </ul>
     </nav>
-                                                    
 <div class="content p-1">
                 <div class="list-group-item">
                     <div class="d-flex">
                         
                         <div class="mr-auto p-2">
-                            <h2 class="display-4 titulo">Agenda</h2>
+                            <h2 class="display-4 titulo">Pesquisar Localidade</h2>
                         </div>
                         
-                    </div><hr>
-                                        
-            <!--Full Calendar-->
-            <div id='calendar'></div>
-
-                </div>    
-</div>
+                    </div><hr>                                                    
 
 
+<!--Inicio da pesquisa--> 
+<div class="content">
+    <div class="flex">
+     <div class="list-group-item">
+        
+  <form class="signin" method="POST" action="">       
+      <img src='./img/favicon.png' width='120' height='93'>
 
-                </div>
-            </div>
+            <div class="form-group col-md-6">
+                <label>                                
+                    <span class="text-danger">*</span> Busque por Prestadores de Serviços na sua Região
+                </label>
+                    <input name="locaidade" type="text" class="form-control" id="localidade" placeholder="Digite a Localidade" value="" required>
+            </div>                           
+                
+            <div class="form-button">
+                <input name="SendInsereLocalidade" type="submit" class="btn btn-primary" value="Buscar">
+            </div>     
+   </form>
+
+     </div> 
+   </div> 
+ </div>                   
             
 <!--JS das páginas-->
-   <script src='js/index.global.min.js'></script><!--Formato do calenário -->
-   <script src='js/core/locales-all.global.min.js'></script><!--Formato do calenário -->
-   <script src='js/custom.js'></script><!--Formato do calenário -->
    <script src="js/jquery-3.3.1.slim.min.js"></script><!--jquery das páginas-->
    <script src="js/popper.min.js"></script><!--Bootstrap 4-->
    <script src="js/bootstrap.js"></script><!--Bootstrap 4-->
    <script src="js/dashboard.js"></script><!--Comando que define a responsividade das tabelas e botões-->
    <script src="js/text_number.js"></script><!--Apenas permite que números sejam inseridos no formulário-->
 
-    
-   
-        </div>
+  
+   </div></div>
+    </div>
     </body>
     </html>

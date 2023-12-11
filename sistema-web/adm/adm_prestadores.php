@@ -1,3 +1,13 @@
+<?php
+    require_once('header.php');
+    require_once('banco_dados.php');
+
+    //para consultas no banco de dados
+    $db = new DBConnect();
+    $stmt = $db->select_veiculos();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     
@@ -52,10 +62,10 @@
             <nav class="sidebar">
             <ul class="list-unstyled">
 
-            <li class='active'><a href='index.html'><i class='fas fa-tachometer-alt'></i> Home</a></li>
+            <li class=''><a href='index.html'><i class='fas fa-tachometer-alt'></i> Home</a></li>
             <li class=''><a href='adm_agenda.html'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
             <li><a href='#submenu2' data-toggle='collapse'><i class='fas fa-search'></i> Pesquisar</a><ul id='submenu2' class='list-unstyled collapse'>
-                <li class=''><a href='adm_prestadores.html'><i class='fas fa-users'></i> Prestador</a></li>
+                <li class='active'><a href='adm_prestadores.html'><i class='fas fa-users'></i> Prestador</a></li>
                 <li class=''><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
             <li class=''><a href='adm_avaliar.html'><i class="fas fa-pencil-alt"></i> Avaliar</a>
             <li><a href='#submenu3' data-toggle='collapse'><i class='fas fa-user'></i> Informações do Usuário</a><ul id='submenu3' class='list-unstyled collapse'>
@@ -68,7 +78,8 @@
                 <div class="list-group-item">
                     <div class="d-flex">
                         <div class="mr-auto p-2">
-                            <h2 class="display-4 titulo">Seja Bem vindo(a)!</h2>
+                            <h2 class="display-4 titulo">Prestadores</h2>
+                               
                                
                         </div>
                         <div class="p-2">
@@ -76,15 +87,7 @@
                         </div>
                     </div><hr>
                                         
-                               <!--Inicio do profile-->
-                               <div class="container content">
-                                  <div class="profile">
-                                        <img src="img/foto/foto.png" width="150px" alt="Foto da Pessoa">
-                                         <p><strong>Você solicitou um agendadamento com </strong> X PRESTADOR, aguarde o confirmamento</p>
-                                        <p><strong>Seu agendamento está confirmado! </strong> aguarde o contato do Prestador</p>
-                                        <p><strong>Seu agendamento não foi aceite </strong> tente entrar em contato com outro prestador</p>
-                                   </div>
-                               </div>
+            <!--Escreva abaixo o conteúdo da página-->
 
 
 

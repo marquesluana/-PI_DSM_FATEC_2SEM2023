@@ -1,3 +1,17 @@
+<?php
+    require_once('header.php');
+    require_once('banco_dados.php');
+
+    if($_SERVER["REQUEST_METHOD"] == "GET"){
+        header("location: avaliar.php");
+        die();
+    }
+
+    //para consultas no banco de dados
+    $db = new DBConnect();
+    $stmt = $db->select_veiculos();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     

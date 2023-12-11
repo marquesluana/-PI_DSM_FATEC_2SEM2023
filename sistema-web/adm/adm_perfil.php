@@ -1,3 +1,12 @@
+<?php
+    require_once('header.php');
+    require_once('banco_dados.php');
+
+    //para consultas no banco de dados
+    //$db = new DBConnect();
+    //$stmt = $db->select_perfil();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     
@@ -56,47 +65,48 @@
             <li class=''><a href='adm_agenda.html'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
             <li><a href='#submenu2' data-toggle='collapse'><i class='fas fa-search'></i> Pesquisar</a><ul id='submenu2' class='list-unstyled collapse'>
                 <li class=''><a href='adm_prestadores.html'><i class='fas fa-users'></i> Prestador</a></li>
-                <li class='active'><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
+                <li class=''><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
             <li class=''><a href='adm_avaliar.html'><i class="fas fa-pencil-alt"></i> Avaliar</a>
             <li><a href='#submenu3' data-toggle='collapse'><i class='fas fa-user'></i> Informações do Usuário</a><ul id='submenu3' class='list-unstyled collapse'>
-                <li class=''><a href='adm_perfil.html'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='..\login.html'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
+                <li class='active'><a href='adm_perfil.html'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='..\login.html'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
 
             </ul>
     </nav>
+                                                    
 <div class="content p-1">
                 <div class="list-group-item">
                     <div class="d-flex">
-                        
                         <div class="mr-auto p-2">
-                            <h2 class="display-4 titulo">Pesquisar Localidade</h2>
+                           <h2 class="display-4 titulo">Perfil</h2>
                         </div>
+                        <div class="p-2">
+                            <a href='adm_edit_perfil.html' class='btn btn-outline-warning btn-sm'>Editar </a>                         </div>
+                    </div><hr>
+                                        <dl class="row">                            
+                        <dt class="col-sm-3"></dt>
+                        <dd class="col-sm-9">
+                            <img src='img/foto/foto.png' width='150' height='150'>                        </dd>
+
+                        <dt class="col-sm-3">Nome Completo</dt>
+                        <dd class="col-sm-9">Márcio Garcia</dd>
+
+                        <dt class="col-sm-3">Tipo de Usuário</dt>
+                        <dd class="col-sm-9">Paciente</dd>
+                        <dt class="col-sm-3">E-mail</dt>
+                        <dd class="col-sm-9">marciogarcia@hotmail.com</dd>
+
+                        <dt class="col-sm-3">Endereço</dt>
+                        <dd class="col-sm-9">Rua Santos Dumont, 25</dd>
+                        <dt class="col-sm-3">Bairro</dt>
+                        <dd class="col-sm-9">Alto da Colina</dd>
+                        <dt class="col-sm-3">Cidade</dt>
+                        <dd class="col-sm-9">São Paulo</dd>
+                        <dt class="col-sm-3">Celular</dt>
+                        <dd class="col-sm-9">(19) 99155 - 1555</dd>                        
                         
-                    </div><hr>                                                    
-
-
-<!--Inicio da pesquisa--> 
-<div class="content">
-    <div class="flex">
-     <div class="list-group-item">
-        
-  <form class="signin" method="POST" action="">       
-      <img src='./img/favicon.png' width='120' height='93'>
-
-            <div class="form-group col-md-6">
-                <label>                                
-                    <span class="text-danger">*</span> Busque por Prestadores de Serviços na sua Região
-                </label>
-                    <input name="locaidade" type="text" class="form-control" id="localidade" placeholder="Digite a Localidade" value="" required>
-            </div>                           
-                
-            <div class="form-button">
-                <input name="SendInsereLocalidade" type="submit" class="btn btn-primary" value="Buscar">
-            </div>     
-   </form>
-
-     </div> 
-   </div> 
- </div>                   
+                    </dl>
+                </div>
+            </div>
             
 <!--JS das páginas-->
    <script src="js/jquery-3.3.1.slim.min.js"></script><!--jquery das páginas-->
@@ -105,8 +115,25 @@
    <script src="js/dashboard.js"></script><!--Comando que define a responsividade das tabelas e botões-->
    <script src="js/text_number.js"></script><!--Apenas permite que números sejam inseridos no formulário-->
 
-  
-   </div></div>
-    </div>
+   <script>
+                function previewImagem() {
+                    var imagem = document.querySelector('input[name=imagem').files[0];
+                    var preview = document.querySelector('#preview-user');
+
+                    var reader = new FileReader();
+
+                    reader.onloadend = function () {
+                        preview.src = reader.result;
+                    }
+
+                    if (imagem) {
+                        reader.readAsDataURL(imagem);
+                    } else {
+                        preview.src = "";
+                    }
+                }
+            </script> 
+   
+        </div>
     </body>
     </html>
