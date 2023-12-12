@@ -1,25 +1,19 @@
 <?php
 require_once('banco_dados.php');
+require_once('session.php');
+require_once('./adm/dados_usuario.php');
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    session_start();
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $db = new DBConnect();
-    $stmt = $db->select_login($email, $senha);
-    if ($stmt == NULL){
-        echo "E-mail não cadastrado.";
-        $_SESSION['online'] = FALSE;
-    } else if ($_POST['senha'] == $stmt){
-        $_SESSION['online'] = TRUE;
-        $_SESSION['username'] = $db->select_username($email);
-        header("location: ./adm/index.php");
-    } else if ($stmt == "SQL Error"){
-        echo "Error SQL";
-        $_SESSION['online'] = FALSE;
-    } else {
-        echo "Senha incorreta.";
-    }
+    $stmt = $db->select_login($email,$senha);
+
+    $sss = new HCCsession();
+    $sss->login($email, $senha, $stmt);
+
+    $user = new usuario();
+    $user->select_perfil($email);
 }
 
 ?>

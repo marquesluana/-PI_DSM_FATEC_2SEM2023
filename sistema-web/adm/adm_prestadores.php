@@ -1,10 +1,12 @@
 <?php
-    require_once('header.php');
-    require_once('banco_dados.php');
+    require_once('adm_header.php');
+    require_once('..\banco_dados.php');
+    require_once('..\session.php');
+    include 'dados_usuario.php';
 
     //para consultas no banco de dados
-    $db = new DBConnect();
-    $stmt = $db->select_veiculos();
+    //$db = new DBConnect();
+    //$stmt = $db->select_veiculos();
 
 ?>
 
@@ -62,14 +64,14 @@
             <nav class="sidebar">
             <ul class="list-unstyled">
 
-            <li class=''><a href='index.html'><i class='fas fa-tachometer-alt'></i> Home</a></li>
-            <li class=''><a href='adm_agenda.html'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
+            <li class=''><a href='index.php'><i class='fas fa-tachometer-alt'></i> Home</a></li>
+            <li class=''><a href='adm_agenda.php'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
             <li><a href='#submenu2' data-toggle='collapse'><i class='fas fa-search'></i> Pesquisar</a><ul id='submenu2' class='list-unstyled collapse'>
-                <li class='active'><a href='adm_prestadores.html'><i class='fas fa-users'></i> Prestador</a></li>
-                <li class=''><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
-            <li class=''><a href='adm_avaliar.html'><i class="fas fa-pencil-alt"></i> Avaliar</a>
+                <li class='active'><a href='adm_prestadores.php'><i class='fas fa-users'></i> Prestador</a></li>
+                <li class=''><a href='adm_busca.php'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
+            <li class=''><a href='adm_avaliar.php'><i class="fas fa-pencil-alt"></i> Avaliar</a>
             <li><a href='#submenu3' data-toggle='collapse'><i class='fas fa-user'></i> Informações do Usuário</a><ul id='submenu3' class='list-unstyled collapse'>
-                <li class=''><a href='adm_perfil.html'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='..\login.html'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
+                <li class=''><a href='adm_perfil.php'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='logout.php'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
 
             </ul>
     </nav>

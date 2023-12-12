@@ -1,10 +1,11 @@
 <?php
-    require_once('header.php');
-    require_once('banco_dados.php');
+    require_once('adm_header.php');
+    require_once('..\banco_dados.php');
+    require_once('..\session.php');
+    include 'dados_usuario.php';
 
-    //para consultas no banco de dados
-    //$db = new DBConnect();
-    //$stmt = $db->select_perfil();
+    $email = $_SESSION['email'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +50,8 @@
                         <img class='rounded-circle' src='img/foto/foto.png' width='20' height='20'>&nbsp;<span class="d-none d-sm-inline">Márcio</span>
                     </a>                    
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"><!--Dropdown que exibe o perfil e o sair-->
-                        <a class="dropdown-item" href="adm_perfil.html"><i class="fas fa-user"></i> Perfil</a><!--ìcone do Perfil-->
-                        <a class="dropdown-item" href="..\login.html"><i class="fas fa-sign-out-alt"></i><!--ìcone do sair--> Sair</a>
+                        <a class="dropdown-item" href="adm_perfil.php"><i class="fas fa-user"></i> Perfil</a><!--ìcone do Perfil-->
+                        <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i><!--ìcone do sair--> Sair</a>
                     </div>
                 </li>
             </ul>                
@@ -61,14 +62,14 @@
             <nav class="sidebar">
             <ul class="list-unstyled">
 
-            <li class=''><a href='index.html'><i class='fas fa-tachometer-alt'></i> Home</a></li>
-            <li class=''><a href='adm_agenda.html'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
+            <li class=''><a href='index.php'><i class='fas fa-tachometer-alt'></i> Home</a></li>
+            <li class=''><a href='adm_agenda.php'><i class='fas fa-clipboard-list'></i> Agenda</a></li>
             <li><a href='#submenu2' data-toggle='collapse'><i class='fas fa-search'></i> Pesquisar</a><ul id='submenu2' class='list-unstyled collapse'>
-                <li class=''><a href='adm_prestadores.html'><i class='fas fa-users'></i> Prestador</a></li>
-                <li class=''><a href='adm_busca.html'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
-            <li class=''><a href='adm_avaliar.html'><i class="fas fa-pencil-alt"></i> Avaliar</a>
+                <li class=''><a href='adm_prestadores.php'><i class='fas fa-users'></i> Prestador</a></li>
+                <li class=''><a href='adm_busca.php'><i class='fas fa-location-arrow'></i> Localidade</a></li></ul></li>
+            <li class=''><a href='adm_avaliar.php'><i class="fas fa-pencil-alt"></i> Avaliar</a>
             <li><a href='#submenu3' data-toggle='collapse'><i class='fas fa-user'></i> Informações do Usuário</a><ul id='submenu3' class='list-unstyled collapse'>
-                <li class='active'><a href='adm_perfil.html'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='..\login.html'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
+                <li class='active'><a href='adm_perfil.php'><i class='fas fa-user'></i> Visualizar Perfil</a></li></ul></li>   <li class=''><a href='logout.php'><i class='fas fa-sign-out-alt'></i> Sair</a></li>
 
             </ul>
     </nav>
@@ -80,7 +81,7 @@
                            <h2 class="display-4 titulo">Perfil</h2>
                         </div>
                         <div class="p-2">
-                            <a href='adm_edit_perfil.html' class='btn btn-outline-warning btn-sm'>Editar </a>                         </div>
+                            <a href='adm_edit_perfil.php' class='btn btn-outline-warning btn-sm'>Editar </a>                         </div>
                     </div><hr>
                                         <dl class="row">                            
                         <dt class="col-sm-3"></dt>
@@ -88,21 +89,18 @@
                             <img src='img/foto/foto.png' width='150' height='150'>                        </dd>
 
                         <dt class="col-sm-3">Nome Completo</dt>
-                        <dd class="col-sm-9">Márcio Garcia</dd>
+                        <dd class="col-sm-9"><?php $nome ?></dd>
 
                         <dt class="col-sm-3">Tipo de Usuário</dt>
-                        <dd class="col-sm-9">Paciente</dd>
+                        <dd class="col-sm-9"><?php $tipo ?></dd>
                         <dt class="col-sm-3">E-mail</dt>
-                        <dd class="col-sm-9">marciogarcia@hotmail.com</dd>
+                        <dd class="col-sm-9"><?php $email ?></dd>
 
-                        <dt class="col-sm-3">Endereço</dt>
-                        <dd class="col-sm-9">Rua Santos Dumont, 25</dd>
-                        <dt class="col-sm-3">Bairro</dt>
-                        <dd class="col-sm-9">Alto da Colina</dd>
-                        <dt class="col-sm-3">Cidade</dt>
-                        <dd class="col-sm-9">São Paulo</dd>
+                        <dt class="col-sm-4">Cidade / Estado</dt>
+                        <dd class="col-sm-4"><?php $cidade ?></dd>
+                        <dd class="col-sm-4"><?php $estado ?></dd>
                         <dt class="col-sm-3">Celular</dt>
-                        <dd class="col-sm-9">(19) 99155 - 1555</dd>                        
+                        <dd class="col-sm-9"><?php $celular ?></dd>                        
                         
                     </dl>
                 </div>

@@ -1,11 +1,11 @@
 <?php
-    //require_once('adm_header.php');
+    require_once('adm_header.php');
     require_once('..\banco_dados.php');
+    require_once('..\session.php');
+    include 'dados_usuario.php';
 
-    $_SESSION['username'] = "Luana Marques Gomes";
-
-    //$db = new DBConnect();
-    //$stmt = $db->select_foto($_SESSION['username']);
+    $email = $_SESSION['email'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
-                        <img class='rounded-circle' src='<?php $stmt ?>' width='20' height='20'>&nbsp;<span class="d-none d-sm-inline"> <?php echo $_SESSION['username']; ?> </span>
+                        <img class='rounded-circle' src='./adm/img/luanafoto.jpg' width='20' height='20'>&nbsp;<span class="d-none d-sm-inline"> <?php $nome ?> </span>
                     </a>                    
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink"><!--Dropdown que exibe o perfil e o sair-->
                         <a class="dropdown-item" href="adm_perfil.php"><i class="fas fa-user"></i> Perfil</a><!--ìcone do Perfil-->
@@ -87,7 +87,7 @@
                                <!--Inicio do profile-->
                                <div class="container content">
                                     <div class="profile">
-                                        <img src="img/foto/foto.png" width="150px" alt="Foto da Pessoa">
+                                        <img src=<?php $foto ?> width="150px" alt="Foto da Pessoa">
                                          <p><strong>Você solicitou um agendadamento com </strong> X PRESTADOR, aguarde a confirmação</p>
                                         <p><strong>Seu agendamento está confirmado! </strong> aguarde o contato do Prestador</p>
                                         <p><strong>Seu agendamento não foi aceite </strong> tente entrar em contato com outro prestador</p>

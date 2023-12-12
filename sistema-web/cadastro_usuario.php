@@ -15,20 +15,25 @@
     $senha = $_POST['senha'];
     $tipo = $_POST['tipo'];
     $categoria = $_POST['categoria'];
-    //$nota = $_POST['nota']; ???????????????
-    //$avaliacao = $_POST['avaliacao']; ???????
 
-    if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
-        $nome_temporario = $_FILES['foto']['tmp_name'];
-
-        // Lê o conteúdo do arquivo
-        $conteudo_imagem = file_get_contents($nome_temporario);
-
-        // Converte o conteúdo da imagem para base64
-        $imagem_base64 = base64_encode($conteudo_imagem);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Diretório de destino para salvar a foto
+        $diretorioDestino = "./adm/img/foto/";
+    
+        // Nome do arquivo original
+        $nomeArquivoOriginal = $_FILES["foto"]["name"];
+    
+        // Caminho completo para o arquivo de destino
+        $caminhoCompleto = $diretorioDestino . $nomeArquivoOriginal;
+    
+        // Move o arquivo para o diretório de destino
+        if (move_uploaded_file($_FILES["foto"]["tmp_name"], $caminhoCompleto)) {
+            $foto = $caminhoCompleto;
+        } else {
+            echo "Erro ao enviar a foto.";
+        }
     }
-    $foto = $imagem_base64;
-
+    
     $cidade = $_POST['cidade'];
     $estado = $_POST['estado'];
     $celular = $_POST['celular'];

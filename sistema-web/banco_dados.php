@@ -65,36 +65,36 @@ class DBConnect {
         }
     }
 
-    /*public function select_foto ($username) {
+    public function delete_usuario ($email){
         try{
-            $sql = "SELECT foto FROM usuario WHERE nome='$username'";
+            $sql = "DELETE FROM usuario WHERE email='$email'";
             $stmt = $this->conn->query($sql);
-            $imageData = base64_decode($stmt);
- 
-            // Nome do arquivo de destino (pode ajustar a extensão dependendo do tipo de imagem)
-            $fileName = 'imagem_convertida.png';
+            if ($stmt->execute()) {
+                return true;
+            } else {
+                return false;
+            }    
+        } catch (PDOException $e) {
+            echo $sql . "<br>" . $e->getMessage();
+            return "SQL Error";
+        }
+    }
 
-            // Salve a imagem no servidor
-            file_put_contents($fileName, $imageData);
-            $stmt = $fileName;
-            return $stmt;
-        } catch (PDOException $e){
+    public function select_foto ($username) {
+        try {
+            $sql = "SELECT foto FROM usuario WHERE nome = :username";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':username', $username, PDO::PARAM_STR);
+            $stmt->execute();
+            $caminhofoto = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $caminhofoto;
+        } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
             return "SQL Error";
         }
     }
     
-    public function select_perfil($nome){
-        try {
-            $sql = "SELECT * FROM usuario WHERE nome = '$_SESSION['username']';
-            $stmt = $this->conn->query($sql);
-        }catch(PDOException $e){
-            echo $sql . "<br>" . $e->getMessage();
-            return;
-        }
-        return $stmt;
-    }
-
+    /*
     public function select_agendamentos(){
         
     }*/
