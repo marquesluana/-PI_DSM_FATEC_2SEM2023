@@ -25,14 +25,27 @@ Repositório utilizado para o Projeto Interdisciplinar do 2º semestre de 2023 d
 </div>
 
 
-## COMO RODAR O PROJETO? :
-<!--
+## COMO RODAR O PROJETO?
+
+### Estrutura para banco de dados, no projeto foi utilizado os seguintes softwares:
+XAMPP, phpMyAdmin, HeidiSQL
+
 ### Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone <https://github.com/marquesluana/-PI_DSM_FATEC_2SEM2023>
 
 ### Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+$ cd -PI_DSM_FATEC_2SEM2023
 
+### Executar o script do banco de dados
+Localizado na pasta banco-de-dados/scripts-sql/create-hcc-database.sql
+
+### Preparar o ambiente de desenvlvimento, utilizando o xampp:
+Startar o Apache e o MySQL
+Colar a pasta sistema-web do projeto na pasta localizada no caminho C:/xampp/htdocs
+
+### Acessar em um navegador o seguinte endereço:
+localhost/sistema-web/
+<!--
 ### Vá para a pasta server
 $ cd server
 
