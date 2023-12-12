@@ -1,0 +1,173 @@
+.navbar{
+    background-color: transparent;  
+    padding: 0px 20px; 
+    background-color: #2cc0b3;
+    font-size: 14pt;        
+}
+
+.img-panel
+{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.img-fundo{    
+    
+    /*height: 95vh; /* 100% da altura da tela */   
+    margin: 0; /* Remova margens padrão */
+}
+
+.logo
+{
+    width: 85px;
+}
+footer{
+    background-color: #365659;   
+    margin-top: 30px;   
+    height: 60px;
+    color: #FFF;
+    padding: 1%;
+}
+.align-right
+{
+    margin-left: auto;
+}
+
+.cabecalho
+{
+    padding: 8px;
+}
+
+.painel
+{
+    border-radius: 10px;
+}
+
+.bg-cinza
+{
+    background-color: #B3B9C4;   
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.content
+{
+    background-image: url("../assets/background/bg-primary.jpg");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+.link
+{
+    color: #E87D3E;  
+    cursor: pointer;
+}
+
+.login-panel {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+    .col-3 {
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px; 
+        width: 29%;
+        float: center;
+        flex: auto;
+        position: relative;
+    }
+    .bloco-imagem img {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    .bloco-imagem {
+        height: 100%;
+        border: 1px solid #c5c5c5;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 10px;
+    }
+    .bloco-imagem b, p {
+        text-align: left;
+    }
+    .bloco-texto {
+        margin-top: 3em;
+    }
+    .col-100 {
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    .col-4 {
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+    .col-4 img {
+    cursor: pointer;
+     margin: 0 auto;
+     padding-top: 1em;
+     vertical-align: middle;
+    }
+    .col-4 img:hover {
+        margin-top: 10px!important;
+        position: relative!important;
+    }
+    
+    .bloco-logos {
+        height: 170px;
+    }
+    
+    .bloco-logos img {
+        margin-top: 50px;
+    }
+
+    .btn-cadastro {
+  color: #000;
+  border-color: #000;
+  justify-content: center;
+}
+
+.btn-cadastro:hover {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-cadastro:focus, .btn-cadastro.focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-cadastro.disabled, .btn-cadastro:disabled {
+  color: #f8f9fa;
+  background-color: transparent;
+}
+
+.btn-cadastro:not(:disabled):not(.disabled):active, .btn-cadastro:not(:disabled):not(.disabled).active,
+.show > .btn-cadastro.dropdown-toggle {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-cadastro:not(:disabled):not(.disabled):active:focus, .btn-cadastro:not(:disabled):not(.disabled).active:focus,
+.show > .btn-cadastro.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.ponto {
+  margin-top: 1rem !important;
+}
