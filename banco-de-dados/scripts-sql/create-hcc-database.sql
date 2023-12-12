@@ -17,7 +17,7 @@ CREATE TABLE Usuario (
     cidade VARCHAR(60) NOT NULL,
     estado VARCHAR(60) NOT NULL,
     celular INT NOT NULL,
-    foto BLOB
+    foto VARCHAR(255) DEFAULT NULL
 );
 
 -- Tabela de Avaliações

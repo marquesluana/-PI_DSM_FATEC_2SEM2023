@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `cidade` varchar(60) NOT NULL,
   `estado` varchar(60) NOT NULL,
   `celular` int(11) NOT NULL,
-  `foto` blob DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `cpf` (`cpf`),
   UNIQUE KEY `email` (`email`)
