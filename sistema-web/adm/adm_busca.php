@@ -91,7 +91,7 @@
      <div class="list-group-item">
         
   <form class="signin" method="POST" action="">       
-      <img src='./img/favicon.png' width='120' height='93'>
+      <img src='./img/favicon.png.png' width='120' height='93'>
 
             <div class="form-group col-md-6">
                 <label>                                

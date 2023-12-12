@@ -89,9 +89,28 @@
                         </div>
                     </div><hr>
                                         
-            <!--Escreva abaixo o conteúdo da página-->
+                    <div class="content">
+    <div class="flex">
+     <div class="list-group-item">
+        
+  <form class="signin" method="POST" action="">       
+      <img src='./img/favicon.png.png' width='120' height='93'>
 
+            <div class="form-group col-md-6">
+                <label>                                
+                    <span class="text-danger">*</span> Busque Prestadores de Serviços pelo nome
+                </label>
+                    <input name="locaidade" type="text" class="form-control" id="localidade" placeholder="Digite a Localidade" value="" required>
+            </div>                           
+                
+            <div class="form-button">
+                <input name="SendInsereLocalidade" type="submit" class="btn btn-primary" value="Buscar">
+            </div>     
+   </form>
 
+     </div> 
+   </div> 
+ </div>       
 
 
 

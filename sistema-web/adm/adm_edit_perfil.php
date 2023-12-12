@@ -4,10 +4,10 @@
     require_once('..\session.php');
     include 'dados_usuario.php';
 
-    if($_SERVER["REQUEST_METHOD"] == "GET"){
+    /*if($_SERVER["REQUEST_METHOD"] == "GET"){
         header("location: adm_edit_perfil.php");
         die();
-    }
+    }*/
 
 ?>
 

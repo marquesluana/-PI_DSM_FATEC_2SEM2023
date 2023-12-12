@@ -4,10 +4,10 @@
     require_once('..\session.php');
     include 'dados_usuario.php';
 
-    if($_SERVER["REQUEST_METHOD"] == "GET"){
+    /*if($_SERVER["REQUEST_METHOD"] == "GET"){
         header("location: avaliar.php");
         die();
-    }
+    }*/
 
     //para consultas no banco de dados
     //$db = new DBConnect();
@@ -93,10 +93,31 @@
                         </div>
                     </div><hr>
                                         
-            <!--Escreva abaixo o conteúdo da página-->
+                    <div class="container mt-5">
+  <h2 class="mb-4">Formulário de Avaliação</h2>
+  <form>
+    <!-- Identificação do Avaliado -->
+    <div class="form-group">
+      <label for="avaliado">Identificação do Avaliado:</label>
+      <input type="text" class="form-control" id="avaliado" placeholder="Nome do Avaliado" required>
+    </div>
 
+    <!-- Identificação do Avaliador -->
+    <div class="form-group">
+      <label for="avaliador">Identificação do Avaliador:</label>
+      <input type="text" class="form-control" id="avaliador" placeholder="Nome do Avaliador" required>
+    </div>
 
+    <!-- Nota -->
+    <div class="form-group">
+      <label for="nota">Nota:</label>
+      <input type="number" class="form-control" id="nota" placeholder="Digite a nota" min="0" max="10" required>
+    </div>
 
+    <!-- Botão de envio -->
+    <button type="submit" class="btn btn-primary">Enviar Avaliação</button>
+  </form>
+</div>
 
 
                 </div>    

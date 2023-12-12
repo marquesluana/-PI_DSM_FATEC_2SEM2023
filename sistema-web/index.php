@@ -93,7 +93,7 @@
       <article id="sobre" class="mb-5">
         <div class="card text-black bg-cinza ponto mb-5">
           <div class="card-header text-center">
-            <h1 class="fs-1" style="color: #365659">Bem-vindo à <strong>Healthcare Connect Center</strong> a maior plataforma de Cuidador de Idoso e Pessoas com deficiência</h1>
+            <h1 class="fs-1">Bem-vindo à <strong>Healthcare Connect Center</strong> a maior plataforma de Cuidador de Idoso e Pessoas com deficiência</h1>
           </div>
           <div class="card-body">
             <h5 class="card-title">Projeto Integrador Multidisciplinar</h5>
@@ -131,7 +131,7 @@
             <h3 class="fs-2 text-center">Confira os nossos atendimentos</h3>
           </div>
         </div>  
-        /<!--<div class="row">-->
+        <div class="row">
             <div class="col-3 bloco-texto">
                 <img src="./img/casinha.png" />
                 <h3><b>No conforto</b> da sua casa</h3>
@@ -150,7 +150,7 @@
                 <p>Tenha acesso a uma gama imensa de prestadores de serviços de todo o Brasil
                 </p>
             </div>
-          <!--</div>-->
+          </div>
         </article>
      
       
@@ -162,7 +162,7 @@
           <div class="cabecalho ponto" style="color: #000">
             <h1 class="fs-1 text-center">Seja Nosso parceiro!!!</h1>
 
-                <a class="btn btn-cadastro" href="cadastro.php" type="submit">Cadastre-se</a>
+                <a class="btn btn-cadastro rounded-0" href="cadastro.php" type="submit">Cadastre-se</a>
               
             
           </div>
@@ -171,7 +171,7 @@
 
 
 
-        <div class="content" style="margin-left: 24%; float: left;">
+        <div class="content row" style="margin: auto; float: left;">
             <div class="col-3 bloco-texto bloco-imagem">
                 <img src="./img/idosin1.jpg">
                 <p><b>Prestador  </b>
