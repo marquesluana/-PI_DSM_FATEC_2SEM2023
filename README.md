@@ -36,12 +36,12 @@ $ git clone <https://github.com/marquesluana/-PI_DSM_FATEC_2SEM2023>
 ### Acesse a pasta do projeto no terminal/cmd
 $ cd -PI_DSM_FATEC_2SEM2023
 
-### Executar o script do banco de dados
-Localizado na pasta banco-de-dados/scripts-sql/create-hcc-database.sql
-
 ### Preparar o ambiente de desenvlvimento, utilizando o xampp:
 Startar o Apache e o MySQL
 Colar a pasta sistema-web do projeto na pasta localizada no caminho C:/xampp/htdocs
+
+### Executar o script do banco de dados
+Localizado na pasta banco-de-dados/scripts-sql/create-hcc-database.sql
 
 ### Acessar em um navegador o seguinte endereço:
 localhost/sistema-web/
